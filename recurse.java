@@ -11,9 +11,8 @@ return makeAllWordsH(k, "", maxLetter, news);
       return list;
     }
     else
-      for (int i = 0; i < maxLetter; i++){
-      makeAllWordsH(k-1, word+ (char) ('a' + i), maxLetter-i, list);
-      makeAllWordsH(k-1, word, maxLetter, list);
+    for(char c = 'A'; c <= 'A' + maxLetter-1; c++){
+   makeAllWordsH(k-1,word+c, maxLetter, list);
     }
 
     return list;
